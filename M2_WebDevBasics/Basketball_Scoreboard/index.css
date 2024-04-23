@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  background-color: #0369a1;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}
