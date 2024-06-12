@@ -9,7 +9,12 @@ tweetBtn.addEventListener("click", function () {
 
 document.addEventListener("click", function (e) {
   if (e.target.dataset.like) {
+    console.log(e.target.dataset.like);
+
     handleLikeClick(e.target.dataset.like);
+  } else if (e.target.dataset.retweet) {
+    console.log(e.target.dataset.retweet);
+    handleRetweetClick(e.target.dataset.retweet);
   }
 });
 
@@ -28,6 +33,21 @@ function handleLikeClick(tweetId) {
   targetTweetObj.isLiked = !targetTweetObj.isLiked; //inverts state (from true to false, false to true)
   console.log(targetTweetObj);
   render(); //to see update data in html
+}
+
+function handleRetweetClick(tweetId) {
+  const targetTweetObj = tweetsData.filter(function (tweet) {
+    return tweet.uuid === tweetId;
+  })[0];
+
+  if (targetTweetObj.isRetweeted) {
+    targetTweetObj.retweets--;
+  } else {
+    targetTweetObj.retweets++;
+  }
+
+  targetTweetObj.isRetweeted = !targetTweetObj.isRetweeted;
+  render();
 }
 
 function getFeedHtml() {
