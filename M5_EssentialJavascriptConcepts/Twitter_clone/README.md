@@ -4,8 +4,18 @@ Install the dependencies and run the project
 npm install
 npm start
 ```
+
+## Content
+  - forEach()
+  - CDNs (content delivery networks)
+  - Text area
+  - Conditionally render styles
+  - Shortcut to flip a bolean
+  - .push()
+  - .unshift()
+
 ## Project in Netlify
-rochetwitterclone.netlify.app
+https://rochetwitterclone.netlify.app/
 
 Head over to https://vitejs.dev/ to learn more about configuring vite
 ## About Scrimba

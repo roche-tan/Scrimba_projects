@@ -76,18 +76,21 @@ function getFeedHtml() {
   let feedHtml = ``;
 
   tweetsData.forEach(function (tweet) {
-    let likeIconClass = "";
+    // let likeIconClass = "";
 
-    if (tweet.isLiked) {
-      // console.log("isLiked");
-      likeIconClass = "liked";
-    }
+    // if (tweet.isLiked) {
+    //   // console.log("isLiked");
+    //   likeIconClass = "liked";
+    // }
 
-    let retweetIconClass = "";
+    // let retweetIconClass = "";
 
-    if (tweet.isRetweeted) {
-      retweetIconClass = "retweeted";
-    }
+    // if (tweet.isRetweeted) {
+    //   retweetIconClass = "retweeted";
+    // }
+
+    const likeIconClass = tweet.isLiked ? "liked" : "";
+    const retweetIconClass = tweet.isRetweeted ? "retweeted" : "";
 
     let repliesHtml = "";
 
