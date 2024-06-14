@@ -14,4 +14,7 @@ Use of:
   - .reduce()
   - Default parameters
 
+## App in Netlify
+https://rochepropertyapp.netlify.app/
+
 Head over to https://vitejs.dev/ to learn more about configuring vite
